@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-color: #f0f9ff;
+  --primary: #3b82f6;
+  --primary-light: #93c5fd;
+  --secondary: #10b981;
+  --secondary-light: #6ee7b7;
+  --accent: #f59e0b;
+  --accent-light: #fbbf24;
+  --danger: #ef4444;
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --white: #ffffff;
+  --card-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Fredoka', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  font-family: 'Fredoka', sans-serif;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.glass-card {
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: var(--card-shadow);
+  padding: 24px;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 6px -1px rgba(59, 130, 246, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #2563eb;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.currency-symbol {
+  font-weight: 700;
+  margin-right: 2px;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.bounce { animation: bounce 2s infinite; }
